@@ -105,6 +105,12 @@ This repository demonstrates a real service I can provide:
 
 > I can automate repetitive Excel and CSV reports using Python, clean raw business data, and generate structured reports that save time and reduce manual errors.
 
+## Related Portfolio Pages
+
+- Project page: https://farshidghaffari.net/projects/
+- Blog article: https://farshidghaffari.net/blog/automate-excel-csv-reports-python/
+- Python services: https://farshidghaffari.net/services/
+
 ## Author
 
 Farshid Ghaffari  
