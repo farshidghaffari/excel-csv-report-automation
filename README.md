@@ -1,5 +1,7 @@
 # Excel / CSV Reporting Automation
 
+[![Tests](https://github.com/farshidghaffari/excel-csv-report-automation/actions/workflows/tests.yml/badge.svg)](https://github.com/farshidghaffari/excel-csv-report-automation/actions/workflows/tests.yml)
+
 **Supporting implementation · Data processing and reporting · Python / Pandas / OpenPyXL**
 
 A reusable data-to-report workflow that validates structured CSV or Excel input, cleans business data, calculates revenue metrics, and produces a multi-sheet Excel report.
