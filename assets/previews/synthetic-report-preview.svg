@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="880" viewBox="0 0 1100 880" role="img" aria-labelledby="title desc">
+<title id="title">Synthetic reporting evidence</title>
+<desc id="desc">Documentation preview of generated workbook excerpts: six input rows, three accepted, three rejected; revenue 55.</desc>
+<rect width="1100" height="880" fill="#f2f6f4"/>
+<text x="36" y="48" font-family="Arial,sans-serif" font-size="27" fill="#173a2b" font-weight="bold">REPORTING EVIDENCE • SYNTHETIC DATA</text>
+<text x="36" y="78" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">Formatted documentation preview of generated workbook excerpts; not an Excel screenshot.</text>
+<text x="36" y="123" font-family="Arial,sans-serif" font-size="23" fill="#173a2b" font-weight="bold">6 input rows     /     3 accepted     /     3 rejected     /     55.00 revenue</text>
+<text x="36" y="172" font-family="Arial,sans-serif" font-size="21" fill="#173a2b" font-weight="bold">Cleaned Data · selected columns</text>
+<rect x="36" y="190" width="1028" height="35" fill="#12372a"/>
+<text x="48" y="214" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">source_row</text>
+<text x="188" y="214" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">product</text>
+<text x="458" y="214" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">quantity</text>
+<text x="618" y="214" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">unit_price</text>
+<text x="808" y="214" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">total_revenue</text>
+<rect x="36" y="225" width="1028" height="37" fill="#ffffff"/>
+<text x="48" y="250" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">2</text>
+<text x="188" y="250" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">Demo Cable</text>
+<text x="458" y="250" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">2</text>
+<text x="618" y="250" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">10.00</text>
+<text x="808" y="250" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">20.00</text>
+<rect x="36" y="262" width="1028" height="37" fill="#e8efeb"/>
+<text x="48" y="287" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">3</text>
+<text x="188" y="287" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">Demo Cable</text>
+<text x="458" y="287" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">1</text>
+<text x="618" y="287" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">20.00</text>
+<text x="808" y="287" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">20.00</text>
+<rect x="36" y="299" width="1028" height="37" fill="#ffffff"/>
+<text x="48" y="324" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">4</text>
+<text x="188" y="324" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">Demo Stand</text>
+<text x="458" y="324" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">3</text>
+<text x="618" y="324" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">5.00</text>
+<text x="808" y="324" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">15.00</text>
+<text x="36" y="370" font-family="Arial,sans-serif" font-size="21" fill="#173a2b" font-weight="bold">Rejected Rows · selected columns</text>
+<rect x="36" y="388" width="1028" height="35" fill="#12372a"/>
+<text x="48" y="412" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">source_row</text>
+<text x="208" y="412" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">rejection_reason</text>
+<rect x="36" y="423" width="1028" height="37" fill="#ffffff"/>
+<text x="48" y="448" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">5</text>
+<text x="208" y="448" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">invalid or missing date</text>
+<rect x="36" y="460" width="1028" height="37" fill="#e8efeb"/>
+<text x="48" y="485" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">6</text>
+<text x="208" y="485" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">quantity must be greater than zero</text>
+<rect x="36" y="497" width="1028" height="37" fill="#ffffff"/>
+<text x="48" y="522" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">7</text>
+<text x="208" y="522" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">unit price cannot be negative</text>
+<text x="36" y="566" font-family="Arial,sans-serif" font-size="21" fill="#173a2b" font-weight="bold">Monthly Summary</text>
+<rect x="36" y="584" width="1028" height="35" fill="#12372a"/>
+<text x="48" y="608" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">month</text>
+<text x="213" y="608" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">total_quantity</text>
+<text x="403" y="608" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">total_revenue</text>
+<text x="593" y="608" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">average_unit_price</text>
+<text x="863" y="608" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">order_count</text>
+<rect x="36" y="619" width="1028" height="37" fill="#ffffff"/>
+<text x="48" y="644" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">2026-01</text>
+<text x="213" y="644" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">6</text>
+<text x="403" y="644" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">55.00</text>
+<text x="593" y="644" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">11.67</text>
+<text x="863" y="644" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">3</text>
+<text x="36" y="698" font-family="Arial,sans-serif" font-size="17" fill="#173a2b">order_count = accepted row count; no unique business-order identifier.</text>
+<text x="36" y="728" font-family="Arial,sans-serif" font-size="17" fill="#173a2b">average_unit_price = unweighted row mean; no currency is implied.</text>
+<text x="36" y="778" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">Workbook: Cleaned Data · Rejected Rows · Monthly Summary</text>
+<text x="36" y="805" font-family="Arial,sans-serif" font-size="16" fill="#173a2b">Category Summary · Product Summary · Report Info</text>
+<text x="36" y="845" font-family="Arial,sans-serif" font-size="14" fill="#173a2b">Reproduce: docs/sample-output.md • unchanged report generator • Pandas 2.2.3 / OpenPyXL 3.1.5</text>
+</svg>

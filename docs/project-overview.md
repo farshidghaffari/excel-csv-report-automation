@@ -1,36 +1,22 @@
 # Project Overview
 
-This project is a practical example of business report automation with Python.
+A local Python workflow for repeatable CSV/Excel reporting: normalize headings, validate schema, split accepted and rejected rows, and produce a six-sheet workbook.
 
-## Problem
+## Business problem and scope
 
-Many small businesses still prepare weekly or monthly Excel reports manually. This process is repetitive, time-consuming, and error-prone.
+Repeated spreadsheet preparation can hide invalid data and inconsistent calculations. This implementation makes its current row-level decisions visible; it does not correct invalid business records or provide a reporting service.
 
-## Solution
+## Current pipeline
 
-This script automates the process:
+1. Read CSV, XLSX, or XLS using the existing Pandas readers.
+2. Normalize headings and reject missing or colliding required schema.
+3. Parse and validate the five required fields.
+4. Normalize accepted records and retain rejected records with reasons.
+5. Calculate accepted-row revenue and summaries by month, category, and product.
+6. Export Cleaned Data, Rejected Rows, Monthly Summary, Category Summary, Product Summary, and Report Info.
 
-1. Read CSV/XLSX data
-2. Clean invalid rows
-3. Normalize column names
-4. Calculate revenue
-5. Generate grouped summaries
-6. Export a multi-sheet Excel report
+See [README metric definitions](../README.md#metric-semantics-and-traceability) and the [synthetic example](sample-output.md). “Cleaning” here means normalization and separation, not automatic repair of invalid rows. `order_count` is an accepted-row count, not a unique-order count.
 
-## Skills Demonstrated
+## Evidence and boundaries
 
-- Python scripting
-- pandas data processing
-- Excel report generation
-- Input validation
-- Clean project structure
-- Documentation
-- Testing with pytest
-
-## Portfolio Value
-
-This repo is useful because it directly maps to freelance service demand:
-- Excel automation
-- CSV cleaning
-- Reporting dashboards
-- Business workflow automation
+The public implementation, existing tests/CI, and reproducible synthetic input demonstrate file processing and workbook generation. They do not establish production deployment, customer outcomes, API integration, scheduling, or accounting suitability. Source preservation requires distinct input/output paths; source-row numbers refer to parsed positions.

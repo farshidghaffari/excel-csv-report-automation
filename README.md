@@ -51,7 +51,7 @@ The workflow:
 | `quantity` | Whole number greater than zero | Number of units |
 | `unit_price` | Numeric and zero or greater | Price per unit |
 
-Example input:
+Synthetic example input (no customer or operational data):
 
 ```csv
 date,product,category,quantity,unit_price
@@ -66,7 +66,7 @@ If a required column is absent, or two headings become identical after normaliza
 Invalid records are not converted to zero or silently discarded. They are written to the `Rejected Rows` worksheet with:
 
 - The original normalized input values
-- The corresponding `source_row` from the source file
+- A `source_row` based on parsed row position (see limitations below)
 - A readable `rejection_reason`
 - Multiple reasons when more than one rule fails
 
@@ -95,6 +95,18 @@ This creates a clear boundary between automated processing and records that requ
 | `Report Info` | Source file, input/accepted/rejected counts, total revenue, and date range |
 
 Every worksheet receives a styled header, frozen first row, practical column widths, and filtering where data rows are present. Revenue and price columns use consistent number formatting.
+
+## Metric Semantics and Traceability
+
+- `order_count` counts accepted rows/line items in each group (`product.count`). There is no order identifier or distinct-order calculation; it is **not a proven count of unique business orders**. Duplicate accepted rows are not removed.
+- `average_unit_price` is the arithmetic mean of accepted rows' `unit_price`, rounded to two decimals. Each row has equal weight regardless of quantity; it is not `total_revenue / total_quantity` and not an average order value.
+- `total_quantity` sums accepted quantities. `total_revenue` sums `quantity × unit_price` and is rounded to two decimals in summaries. No currency conversion, tax, or accounting precision policy is implemented.
+- `source_row` is assigned sequentially from 2 to the parsed records, assuming a single header row. It is useful for ordinary flat files, but blank-line skipping and multiline CSV records can break correspondence with physical file line numbers. It is not a durable business identifier or byte-level provenance.
+- `Cleaned Data` is the existing sheet name for normalized **accepted** records. Invalid rows are rejected and retained separately; the tool does not repair their business values. Rejected values are preserved as loaded by Pandas, not as original bytes or exact source formatting.
+
+See the [six-sheet synthetic evidence and reproduction steps](docs/sample-output.md).
+
+![Synthetic reporting preview](assets/previews/synthetic-report-preview.svg)
 
 ## Quick Start
 
@@ -166,9 +178,9 @@ The current tests verify:
 
 - **Schema validation happens before reporting.** Required fields must exist before row processing begins.
 - **Invalid records remain visible.** Rejected rows are separated with actionable reasons instead of being silently lost.
-- **Revenue uses accepted records only.** Invalid values cannot be coerced into report totals.
+- **Revenue uses accepted records only.** Rows rejected by the implemented rules are excluded from report totals.
 - **Input and output formats fail explicitly.** Supported source formats and the required `.xlsx` output are enforced.
-- **Source data is not modified in place.** The workflow writes a separate report file.
+- **Use a distinct output path.** The demo writes a separate report file, but the implementation does not prevent using the same `.xlsx` input and output path. Source preservation depends on the caller.
 - **Report structure is deterministic.** The same valid schema produces the same worksheets and summary dimensions.
 - **Empty accepted datasets remain safe.** Metadata and worksheets are still generated without date-range failures.
 
@@ -181,6 +193,7 @@ This is a focused supporting implementation rather than a complete reporting pla
 - CSV reading currently assumes conventional comma-delimited input and standard Pandas-compatible encoding.
 - The workflow runs locally and does not yet include scheduling, notifications, storage integrations, or a web interface.
 - Business-specific tax, currency, timezone, and accounting rules must be defined before production adaptation.
+- Validation is limited to the implemented rules, not a guarantee of business correctness. Finite-price checks and reserved output-column collision handling are not comprehensive; use the documented schema for this demo.
 
 These boundaries are explicit so the repository demonstrates implemented behavior without presenting planned features as completed work.
 
