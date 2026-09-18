@@ -1,0 +1,7 @@
+date,product,category,quantity,unit_price
+2026-01-05,Demo Cable,Accessories,2,10
+2026-01-06,Demo Cable,Accessories,1,20
+2026-01-07,Demo Stand,Office,3,5
+not-a-date,Demo Cable,Accessories,1,10
+2026-01-09,Demo Stand,Office,0,5
+2026-01-10,Demo Cable,Accessories,1,-2

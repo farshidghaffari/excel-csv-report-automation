@@ -1,5 +1,7 @@
 # How to Automate Excel and CSV Reports with Python
 
+> **Editorial / simplified teaching draft.** The short code below illustrates aggregation only. It is not the repository validation pipeline: it omits schema checks, rejected-row reasons, six-sheet output, and processing metadata. Use [the implementation README](../README.md) and [synthetic evidence](../docs/sample-output.md) for current behavior. No website is changed by this document.
+
 Manual Excel reporting can take a lot of time, especially when the same steps are repeated every week or month.
 
 Python can help automate this process by reading raw CSV or Excel files, cleaning the data, calculating useful metrics, and exporting a structured report.
@@ -61,7 +63,7 @@ I created a sample project that demonstrates this workflow:
 
 https://github.com/farshidghaffari/excel-csv-report-automation
 
-It reads a sample CSV file, cleans the data, creates multiple summaries, and exports a multi-sheet Excel report.
+The repository implementation normalizes input, separates accepted and rejected rows, and exports a six-sheet Excel report. It does not automatically repair invalid business records.
 
 ## Conclusion
 
